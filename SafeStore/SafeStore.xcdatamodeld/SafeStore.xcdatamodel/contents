@@ -5,6 +5,8 @@
     </entity>
     <entity name="SafetyTip" representedClassName="SafetyTip" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
 </model>

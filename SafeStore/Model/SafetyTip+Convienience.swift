@@ -25,11 +25,12 @@ extension SafetyTip {
         self.title = title
         self.desc = desc
         self.isFavorite = isFavorite
+        self.id = id
     }
 }
 
 extension SafetyTip {
-    static func == (lhs: Entry, rhs: Entry) -> Bool {
-        return lhs.title == rhs.title && lhs.description == rhs.description && lhs.isFavorite == rhs.isFavorite
+    static func == (lhs: SafetyTip, rhs: SafetyTip) -> Bool {
+        return lhs.title == rhs.title && lhs.desc == rhs.desc && lhs.isFavorite == rhs.isFavorite
     }
 }

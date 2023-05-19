@@ -10,7 +10,7 @@ import CoreData
 enum CoreDataStack {
 
     static let container: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "JournalCoreData")
+        let container = NSPersistentContainer(name: "SafeStoreData")
         container.loadPersistentStores { storeDescription, error in
             if let error = error {
                 fatalError("Error loading persistent stores \(error)")
@@ -30,4 +30,9 @@ enum CoreDataStack {
             }
         }
     }
+    
+    static func delete(safetyTip: SafetyTip) {
+            context.delete(safetyTip)
+            saveContext()
+        }
 }
